@@ -1,19 +1,21 @@
 
-L_a = int(input("Choisissez une longueur pour A :"))
-L_b = int(input("Choisissez une longueur pour B :"))
-L_c = int(input("Choisissez une longueur pour C :"))
+a = float(input("Choisissez une longueur pour A : "))
+b = float(input("Choisissez une longueur pour B : "))
+c = float(input("Choisissez une longueur pour C : "))
 
+#Pour savoir si l'on peut construire un triangle dont les longueurs des côtés sont données,
+#il suffit de vérifier que la plus grande longueur est inférieure à la somme des deux autres.
 
-if L_a <= 0 and L_b <= 0 and L_c <= 0:
-    if (L_a**2 == L_b**2 + L_c**2) or (L_a**2 == L_b**2 + L_c**2) or (L_a**2 == L_b**2 + L_c**2):
+if a + b > c and b + c > a and c + a > b:
+    if (a**2 == b**2 + c**2) or (c**2 == b**2 + a**2) or (b**2 == a**2 + c**2):
         print("Le triangle est rectangle")
-        if (L_a == L_b) or (L_a == L_c) or (L_b== L_c):
+        if (a == b) or (a == c) or (b == c):
             print("Le triangle est rectangle isocèle")
-    elif (L_a == L_b == L_c):
+    elif (a == b == c):
         print("Le triangle est équilateral")
-    elif (L_a == L_b) or (L_a == L_c) or (L_b== L_c):
+    elif (a == b) or (a == c) or (b== c):
         print("Le triangle est isocèle")
     else:
         print("Le triangle est quelconque")
 else:
-    print("Les valeurs saisies sont infèrieurs ou égales à zéro")
+    print("Les valeurs saisies ne permettent pas de former un triangle")

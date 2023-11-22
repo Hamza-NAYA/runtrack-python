@@ -5,7 +5,9 @@ def table(num):
         produit = num * number
         table = str(num) + " x " + str(number) + " = " + str(produit)
         print(table)
+    print("\n")
 
 entier_n = int(input("Entrez un entier supérieur à zéro (N) : "))
 
-table(entier_n)
+for i in range(1, entier_n + 1):
+    table(i)
