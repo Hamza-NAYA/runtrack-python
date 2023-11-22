@@ -1,6 +1,6 @@
 
-capital_initial = 10000
-rendement = 5
+capital_initial = int(input("Entrez votre capital d'investissement : "))
+rendement = int(input("Entrez le rendemment souhaité : "))
 
 #rendement brut = (gain_annuel / capital_initial) x 100
 #pour avoir le gain on reprend la formule
